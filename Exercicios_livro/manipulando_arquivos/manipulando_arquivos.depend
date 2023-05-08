@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1669689396 source:c:\users\daniel_carvalho\documents\projeto c\exercicios_livro\manipulando_arquivos\main.cpp
+	<iostream>
+	<string.h>
+

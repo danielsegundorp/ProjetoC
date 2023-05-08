@@ -1,0 +1,56 @@
+Nome: Daniel Segundo de Carvalho			RA: 2840482213030
+
+
+
+Questão 01
+
+********************************************
+
+int pop(Tpilha *p, int elementos){
+
+	if(p->topo < MAX-1){
+		for(int i = 0; p->topo<MAX-1; i++){
+			p->topo = p->topo + 1;
+			p->elementos[p->topo] = elementos;
+			
+		}
+		cout << "\nelementos inseridos com sucesso...";
+	}
+	else
+		cout <<"\nImpossível inserir, pilha cheia...";
+	return 0;
+}
+
+
+********************************************
+
+Questão 02
+
+int receba(int *a, int *b){
+	int x, y;
+	aux = 0;
+	x = 5;
+	y = 9;
+	cout << "\nValor de x: " << x;
+	cout << "\nValor de y: " << y;
+	return x, y;	
+
+}
+
+
+
+
+
+*******************************************
+
+Questão 03
+
+typedef struct SCadf (*cadastro) {
+	int quantidade;
+	char descricao[100];
+	float valor;
+
+}TCadf
+
+
+ 

@@ -1,0 +1,102 @@
+#include <iostream>
+#include <string.h>
+#define MAX 3
+
+using namespace std;
+
+void menu()
+{
+
+    system("cls");
+    cout << "* * * *   M E N U   * * * *\n\n";
+    cout << "\n1 - Cadastrar Funcionarios";
+    cout << "\n2 - Lista de Funcionarios cadastrados";
+    cout << "\n3 - Sair";
+
+}
+
+typedef struct SCadFunc{
+   int codigo;
+   char nome[50];
+   float salario;
+}TCadFunc;
+
+
+int cadastro (TCadFunc f[])
+{
+    system("cls");
+
+    cout << "* * * *   CADASTRO DE FUNCIONARIOS   * * * *\n\n";
+     for (int i=0;i<MAX;i++)
+    {
+        f[i].codigo=i+1;
+        cout << "\nCodigo  : " << f[i].codigo ;
+        cout << "\nDigite o nome    : ";
+        cin >> f[i].nome;
+        cout << "\nDigite o salario : ";
+        cin >> f[i].salario;
+    }
+   return 0;
+}
+
+int imprimir (TCadFunc f[])
+{
+    system("cls");
+    cout << "* * * *   LISTA DE FUNCIONARIOS   * * * *\n\n";
+    for (int i=0;i<MAX;i++)
+    {
+       cout << "\nCodigo  : " << f[i].codigo;
+       cout << "\nNome    : " << f[i].nome;
+       cout << "\nSalario : " << f[i].salario;
+       cout << "\n";
+    }
+    return 0;
+}
+
+
+int main()
+{
+    int op;
+
+    do{
+    menu();
+    cout << "\n\nDigite a sua opcao: ";
+    cin >> op;
+    switch(op)
+     {
+         case 1: system("cls");
+                 TCadFunc pessoas[MAX];
+                 int flag;
+                 flag = cadastro(pessoas);
+                 if (flag==0){
+                    cout << "\n\nFuncionarios cadastrados com sucesso!!\n\n";
+                    system("pause");
+                 }
+                 else{
+                    cout << "\n\nProblemas ao cadastrar funcionarios...\n\n";
+                    system("pause");
+                    cout << "\n\n";
+                 }
+                 break;
+
+         case 2: system("cls");
+                  if (flag==0){
+                    cout << "* * * *   LISTA DE FUNCIONARIOS   * * * *\n\n";
+                    flag = imprimir(pessoas);
+                    cout << "\n\nFuncionarios listados com sucesso!!\n\n";
+                    system("pause");
+                  }
+                  else{
+                    cout << "* * * *   LISTA DE FUNCIONARIOS   * * * *\n\n";
+                    cout << "\n\nProblemas ao listar funcionarios...\n\n";
+                    system("pause");
+                    cout << "\n\n";
+                  }
+                 break;
+     }
+
+    }while(op!=3);
+
+
+    return 0;
+}

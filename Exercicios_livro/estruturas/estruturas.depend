@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1680186337 source:c:\codigos\codeblocks\projeto c\exercicios_livro\estruturas\main.cpp
+	<iostream>
+	<string.h>
+

@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float peso, altura, imc, acc_imc, media_peso, media_altura, media_imc, acc_peso, acc_altura;
+    float maior_peso, maior_altura, maior_imc, menor_peso, menor_altura, menor_imc;
+    int contador, decisao, qte;
+
+    contador=0;
+    acc_imc=0;
+    acc_altura =0;
+    acc_peso=0;
+    maior_peso= -99999;
+    maior_altura= -99999;
+    maior_imc= -99999;
+    menor_peso= 99999;
+    menor_altura= 99999;
+    menor_imc= 99999;
+    decisao = 1;
+    qte = 1;
+
+    while(decisao == 1){
+
+        printf("\nInfome o %d peso: ", qte);
+        scanf("%f",&peso);
+        printf("\nInforme a  %d altura: ", qte);
+        scanf("%f",&altura);
+        imc = (peso)/(altura*altura);
+        acc_peso+=peso;
+        acc_altura+=altura;
+        acc_imc+=imc;
+        contador++;
+        qte++;
+        if(peso > maior_peso){
+            maior_peso = peso;
+        }
+        if(altura > maior_altura){
+            maior_altura = altura;
+        }
+        if(imc > maior_imc){
+            maior_imc = imc;
+        }
+        if(peso < menor_peso){
+            menor_peso = peso;
+        }
+        if(altura < menor_altura){
+            menor_altura = altura;
+        }
+        if(imc < menor_imc){
+            menor_imc = imc;
+        }
+
+        printf("\nDeseja digitar os dados de mais uma pessoa?");
+        printf("\n1 - sim\n2 - nao\n");
+        scanf("%d",&decisao);
+    }
+
+    media_peso=acc_peso/contador;
+    media_altura=acc_altura/contador;
+    media_imc=acc_imc/contador;
+
+
+
+    printf("\nA media dos pesos eh: %f",media_peso);
+    printf("\nA media das alturas eh: %f", media_altura);
+    printf("\nA media dos imcs eh: %f", media_imc);
+    printf("\nO maior peso eh: %f", maior_peso);
+    printf("\nA maior altura eh: %f", maior_altura);
+    printf("\nO maior imc eh: %f", maior_imc);
+    printf("\nO menor peso eh: %f", menor_peso);
+    printf("\nA menor altura eh: %f", menor_altura);
+    printf("\nO menor imc eh: %f\n\n", menor_imc);
+
+
+
+
+    return 0;
+}

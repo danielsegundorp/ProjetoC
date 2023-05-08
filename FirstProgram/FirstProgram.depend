@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1661008750 source:c:\users\daniel_carvalho\documents\projeto c\firstprogram\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1680186335 source:c:\codigos\codeblocks\projeto c\firstprogram\main.c
+	<stdio.h>
+	<stdlib.h>
+

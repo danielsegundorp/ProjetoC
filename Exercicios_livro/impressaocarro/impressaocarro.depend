@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1665458794 source:c:\users\daniel_carvalho\documents\projeto c\exercicios_livro\impressaocarro\main.c
+	<stdio.h>
+	<stdlib.h>
+
